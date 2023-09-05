@@ -9,12 +9,7 @@ const Home = () => {
 	//const (listItem, setListItem) = useState('');
 
 	return (
-		<>
-		 <div>
-			<p>This is the Shopping List</p>
-			< ShoppingList />
-		</div> 
-		</>
+		<ShoppingList />
 	);
 };
 
