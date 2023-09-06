@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 
 const ShoppingList = () => {
-  const [items, setItems] = useState([
-    "oranges", "apples", "candy"
-  ]);
+  const [items, setItems] = useState([]);
+
   return (
     <div className="wrapper">
       <h1>todos</h1>
@@ -16,7 +15,7 @@ const ShoppingList = () => {
               setItems(items.slice().filter((i) => i !== item));
             }}/>
           <div className="counter">
-            <h5>x items left</h5>
+            {items.length == null ? 0: items.length} items left
           </div>
       </div>
       <div className="subcontainerone"></div>
@@ -27,7 +26,8 @@ const ShoppingList = () => {
 }
 
 const ListItem = (props) => (
-  <li onClick={()=> props.handleClick(props.name)}>{props.name}</li>
+  <li onClick={()=> props.handleClick(props.name)}>{props.name}
+  <button>X</button></li>
 )
 
 const ListDisplay = (props) => {

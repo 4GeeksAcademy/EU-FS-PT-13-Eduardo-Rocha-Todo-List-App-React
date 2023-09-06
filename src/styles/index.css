@@ -13,7 +13,7 @@ body {
 
 h1 {
     text-align: center;
-    color:brown;
+    color:rgb(180, 66, 66);
     font-size: 64px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -21,6 +21,8 @@ h1 {
 input {
     margin-top: 10px;
     margin-left: 15px;
+    height: 35px;
+    font-size: 18px;
     border: none;
     width: fit-content;
     border-color: none;
@@ -28,7 +30,6 @@ input {
 }
 
 .container {
-    padding: 8px, 8px, 8px, 8px;
     text-align: start;
     border: solid;
     border-width: 2px;
@@ -42,7 +43,7 @@ input {
 
 ul {
     padding-left: 0px;
-    padding-right: 2px;
+    padding-right: 0px;
     margin: 0px 8px 0px 0px;
 }
 
@@ -57,16 +58,17 @@ li {
     height: 35px;
     font-size: 20px;
     border-style: none;
-    background-color: whitesmoke;
+    border-bottom: solid 1px;
+    border-color: rgb(169, 168, 168);
+    background-color: white;
     color: grey;
     margin-bottom: 2px;
 }
 
 .counter {
-    padding-right: 0px;
-    padding-left: 0px;
-    font-size: 14px;
-    background-color: whitesmoke;
+    padding: none;
+    margin: none;
+    font-size: 12px;
     color: grey;
     margin-bottom: 2px;
     overflow: auto;
@@ -81,9 +83,9 @@ li {
     border-left: 1px;
     border-right: 1px;
     border-style: solid;
-    border-style: rgb(171, 169, 169);
+    border-color: rgb(171, 169, 169);
     margin: auto;
-    width: 85%;
+    width: 86%;
     height: 5px;
     box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
 }
@@ -94,9 +96,9 @@ li {
     border-left: 1px;
     border-right: 1px;
     border-style: solid;
-    border-style: rgb(171, 169, 169);
+    border-color: rgb(171, 169, 169);
     margin: auto;
-    width: 80%;
+    width: 83%;
     height: 5px;
     box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
 }
