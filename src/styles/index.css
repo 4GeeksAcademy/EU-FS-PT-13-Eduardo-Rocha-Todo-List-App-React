@@ -102,3 +102,15 @@ li {
     height: 5px;
     box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
 }
+
+.deletebtn {
+    color:brown;
+    display:none;
+    background-color: transparent;
+    border: none;
+}
+
+.todoitem:hover .deletebtn {
+    display: block;
+    
+}

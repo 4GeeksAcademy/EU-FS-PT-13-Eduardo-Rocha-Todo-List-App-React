@@ -8,11 +8,11 @@ const ShoppingList = () => {
       <h1>todos</h1>
       <div className="row">
       <div className="container col-sm-8">
-            <InputText className="input-item" handleSubmit={(item) => {
+            <InputText className="input-item" items={items} handleSubmit={(item) => {
               setItems(items.concat(item));
             }}/>
             <ListDisplay className="list-item" items={items} handleClick={(item) => {
-              setItems(items.slice().filter((i) => i !== item));
+              setItems(items.filter((i) => i !== item));
             }}/>
           <div className="counter">
             {items.length == null ? 0: items.length} items left
@@ -26,8 +26,9 @@ const ShoppingList = () => {
 }
 
 const ListItem = (props) => (
-  <li onClick={()=> props.handleClick(props.name)}>{props.name}
-  <button>X</button></li>
+  <li className="todoitem d-flex justify-content-between">{props.name}
+  <button className="deletebtn" onClick={() => props.handleClick(props.name)}>X</button>
+  </li>
 )
 
 const ListDisplay = (props) => {
@@ -50,10 +51,10 @@ const InputText = (props) => {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      props.handleSubmit(value);
+      {value === "" ? "" : props.handleSubmit(value.trim())};
       setValue('');
     }}>
-    <input type="text" value={value} placeHolder="What needs to be done?" onChange={e => setValue(e.target.value)}/>
+    <input type="text" value={value} placeHolder={props.items.length == 0 ? "No tasks, add a task" : "What needs to be done?"} onChange={e => setValue(e.target.value)}/>
     </form>
   )
 }
