@@ -6,7 +6,6 @@ import ShoppingList from "./shoppinglist";
 
 //create your first component
 const Home = () => {
-	//const (listItem, setListItem) = useState('');
 
 	return (
 		<ShoppingList />

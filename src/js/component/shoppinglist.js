@@ -53,8 +53,8 @@ const InputText = (props) => {
       e.preventDefault();
       {value === "" ? "" : props.handleSubmit(value.trim())};
       setValue('');
-    }}>
-    <input type="text" value={value} placeHolder={props.items.length == 0 ? "No tasks, add a task" : "What needs to be done?"} onChange={e => setValue(e.target.value)}/>
+      }}>
+        <input type="text" value={value} placeholder={props.items.length == 0 ? "No tasks, add a task" : "What needs to be done?"} onChange={e => setValue(e.target.value)}/>
     </form>
   )
 }
