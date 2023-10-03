@@ -3,8 +3,12 @@ import React, {useState} from 'react';
 const ShoppingList = () => {
   const [items, setItems] = useState([]);
 
-  const handleClick=((item) => {
-    setItems(items.filter((i) => i !== item))})
+  const handleDelete= id => {
+    const newItems = [...items];
+    newItems.splice(id, 1);
+    console.log(newItems)
+    setItems(newItems)
+  }
 
   return (
     <div className="wrapper">
@@ -15,10 +19,10 @@ const ShoppingList = () => {
               setItems(items.concat(item));
             }}/>
             <ul>
-              {items.map((item, index) => 
-              <li className="todoitem d-flex justify-content-between" key={index}>{item}
-                <button className="deletebtn" onClick={() => {handleClick(item)}}>X</button>
-              </li>
+              {items.map((items, index) => 
+              <div className="todoitem d-flex justify-content-between" key={index}>{items}
+                <button className="deletebtn" onClick={() => {handleDelete(index)}}>X</button>
+              </div>
               )}
             </ul>
           <div className="counter">
